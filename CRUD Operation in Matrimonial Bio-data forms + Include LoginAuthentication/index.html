@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimonial Biodata Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Matrimonial Biodata Form</h1>
+        </div>
+        
+        <div class="form-content">
+            <form id="personalForm" action="save_biodata.php" method="POST">
+                <!-- Profile Photo Section -->
+                <div class="section">
+                    <h2 class="section-title">Profile Photo</h2>
+                    <div class="profile-photo">
+                        <img src="abid.jpg" alt="Profile Photo">
+                    </div>
+                </div>
+
+                <!-- Personal Details Section -->
+                <div class="section">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            <div class="error-message">Please enter your full name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input type="number" id="age" name="age" placeholder="Enter your age" min="18" max="99" required>
+                            <div class="error-message">Please enter a valid age (18-99)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message">Please select your gender</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="maritalStatus">Marital Status *</label>
+                            <select id="maritalStatus" name="maritalStatus" required>
+                                <option value="">Select status</option>
+                                <option value="single">Single</option>
+                                <option value="divorced">Divorced</option>
+                                <option value="widowed">Widowed</option>
+                            </select>
+                            <div class="error-message">Please select your marital status</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="height">Height (cm)</label>
+                            <input type="number" id="height" name="height" placeholder="Enter height in cm" min="100" max="250">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" name="weight" placeholder="Enter weight in kg" min="30" max="200">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Information Section -->
+                <div class="section">
+                    <h2 class="section-title">Family Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name *</label>
+                            <input type="text" id="fatherName" name="fatherName" placeholder="Enter father's name" required>
+                            <div class="error-message">Please enter father's name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fatherOccupation">Father's Occupation</label>
+                            <input type="text" id="fatherOccupation" name="fatherOccupation" placeholder="Enter occupation">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="motherName">Mother's Name *</label>
+                            <input type="text" id="motherName" name="motherName" placeholder="Enter mother's name" required>
+                            <div class="error-message">Please enter mother's name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="motherOccupation">Mother's Occupation</label>
+                            <input type="text" id="motherOccupation" name="motherOccupation" placeholder="Enter occupation">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="siblings">Number of Siblings</label>
+                        <input type="number" id="siblings" name="siblings" placeholder="Enter number of siblings" min="0" max="20">
+                    </div>
+                </div>
+
+                <!-- Matrimonial Information Section -->
+                <div class="section">
+                    <h2 class="section-title">Matrimonial Preferences</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="preferredAge">Preferred Age Range</label>
+                            <select id="preferredAge" name="preferredAge">
+                                <option value="">Select preferred age</option>
+                                <option value="18-25">18-25 years</option>
+                                <option value="26-30">26-30 years</option>
+                                <option value="31-35">31-35 years</option>
+                                <option value="36-40">36-40 years</option>
+                                <option value="41+">41+ years</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredHeight">Preferred Height</label>
+                            <select id="preferredHeight" name="preferredHeight">
+                                <option value="">Select preferred height</option>
+                                <option value="150-160">150-160 cm</option>
+                                <option value="161-170">161-170 cm</option>
+                                <option value="171-180">171-180 cm</option>
+                                <option value="181-190">181-190 cm</option>
+                                <option value="191+">191+ cm</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredEducation">Preferred Education Level</label>
+                        <select id="preferredEducation" name="preferredEducation">
+                            <option value="">Select education level</option>
+                            <option value="highSchool">High School</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="phd">PhD</option>
+                            <option value="professional">Professional Degree</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredProfession">Preferred Profession</label>
+                        <input type="text" id="preferredProfession" name="preferredProfession" placeholder="Enter preferred profession">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="aboutPartner">Describe Your Ideal Partner</label>
+                        <textarea id="aboutPartner" name="aboutPartner" rows="4" placeholder="Describe the qualities you're looking for in a partner"></textarea>
+                    </div>
+                </div>
+
+                <!-- Additional Information Section -->
+                <div class="additional-info">
+                    <h2 class="section-title">Hobbies & Interests</h2>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hobby1" name="hobbies" value="sports">
+                            <label for="hobby1">Sports</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hobby2" name="hobbies" value="reading">
+                            <label for="hobby2">Reading</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hobby3" name="hobbies" value="music">
+                            <label for="hobby3">Music</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hobby4" name="hobbies" value="travel">
+                            <label for="hobby4">Travel</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hobby5" name="hobbies" value="cooking">
+                            <label for="hobby5">Cooking</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hobby6" name="hobbies" value="photography">
+                            <label for="hobby6">Photography</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information Section -->
+                <div class="contact-section">
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email" required>
+                            <div class="error-message">Please enter a valid email</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                            <div class="error-message">Please enter a valid phone number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter address">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <select id="city" name="city" required>
+                                <option value="">Select a city</option>
+                                <option value="dhaka">Dhaka</option>
+                                <option value="chittagong">Chittagong</option>
+                                <option value="sylhet">Sylhet</option>
+                                <option value="rajshahi">Rajshahi</option>
+                                <option value="khulna">Khulna</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message">Please select your city</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Yourself Section -->
+                <div class="section">
+                    <h2 class="section-title">About Yourself</h2>
+                    <div class="form-group">
+                        <label for="aboutYou">Describe Yourself *</label>
+                        <textarea id="aboutYou" name="aboutYou" rows="5" placeholder="Tell us about yourself, your personality, values, etc." required></textarea>
+                        <div class="error-message">Please tell us about yourself</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education">Education *</label>
+                        <input type="text" id="education" name="education" placeholder="Enter your education details" required>
+                        <div class="error-message">Please enter your education details</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profession">Profession *</label>
+                        <input type="text" id="profession" name="profession" placeholder="Enter your profession" required>
+                        <div class="error-message">Please enter your profession</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="income">Annual Income (BDT)</label>
+                        <input type="number" id="income" name="income" placeholder="Enter annual income">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Save Biodata</button>
+                <div class="success-message" id="successMessage">
+                    Biodata saved successfully!
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Form validation
+        function validateForm() {
+            const form = document.getElementById('personalForm');
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                const formGroup = field.closest('.form-group');
+                
+                if (!field.value.trim()) {
+                    formGroup.classList.add('error');
+                    isValid = false;
+                } else {
+                    formGroup.classList.remove('error');
+                }
+            });
+
+            // Email validation
+            const email = document.getElementById('email');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value && !emailPattern.test(email.value)) {
+                email.closest('.form-group').classList.add('error');
+                isValid = false;
+            }
+
+            // Phone validation
+            const phone = document.getElementById('phone');
+            const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
+            if (phone.value && !phonePattern.test(phone.value.replace(/\s/g, ''))) {
+                phone.closest('.form-group').classList.add('error');
+                isValid = false;
+            }
+
+            // Age validation
+            const age = document.getElementById('age');
+            if (age.value && (age.value < 18 || age.value > 99)) {
+                age.closest('.form-group').classList.add('error');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // // Handle form submission
+        // document.getElementById('personalForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+            
+        //     if (validateForm()) {
+        //         const submitBtn = document.querySelector('.submit-btn');
+        //         const successMessage = document.getElementById('successMessage');
+                
+        //         submitBtn.disabled = true;
+        //         submitBtn.textContent = 'Saving...';
+                
+        //         setTimeout(() => {
+        //             submitBtn.disabled = false;
+        //             submitBtn.textContent = 'Save Biodata';
+        //             successMessage.style.display = 'block';
+                    
+        //             // Log form data
+        //             const formData = new FormData(this);
+        //             const data = Object.fromEntries(formData);
+        //             console.log('Form Data:', data);
+                    
+        //             // Hide success message after 3 seconds
+        //             setTimeout(() => {
+        //                 successMessage.style.display = 'none';
+        //             }, 3000);
+        //         }, 1500);
+        //     }
+        // });
+
+        // Real-time validation for all fields
+        document.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('blur', function() {
+                const formGroup = this.closest('.form-group');
+                
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    formGroup.classList.add('error');
+                } else if (this.type === 'email' && this.value) {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(this.value)) {
+                        formGroup.classList.add('error');
+                    } else {
+                        formGroup.classList.remove('error');
+                    }
+                } else if (this.type === 'tel' && this.value) {
+                    const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
+                    if (!phonePattern.test(this.value.replace(/\s/g, ''))) {
+                        formGroup.classList.add('error');
+                    } else {
+                        formGroup.classList.remove('error');
+                    }
+                } else if (this.id === 'age' && this.value) {
+                    if (this.value < 18 || this.value > 99) {
+                        formGroup.classList.add('error');
+                    } else {
+                        formGroup.classList.remove('error');
+                    }
+                } else {
+                    formGroup.classList.remove('error');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
